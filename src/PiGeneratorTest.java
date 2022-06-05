@@ -20,11 +20,16 @@ public class PiGeneratorTest {
 
     @Test
     public void negativeTest(){
-        assertEquals(6, PiGenerator.powerMod(-2, 6, 7));
+        assertEquals(1, PiGenerator.powerMod(-2, 6, 7));
     }
 
     @Test
     public void negativeTest1(){
-        assertEquals(-4, PiGenerator.powerMod(-2, 6, -5));
+        assertEquals(4, PiGenerator.powerMod(-2, 6, -5));
+    }
+
+    @Test
+    public void largeNumberTest(){
+        assertEquals(448, PiGenerator.powerMod(4, 17, 576));
     }
 }
